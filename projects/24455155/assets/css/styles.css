@@ -1,0 +1,60 @@
+/*CSS Değişkenleri */
+:root {
+  --primary-color: #2E3A59;
+  --secondary-color: #4F6D7A;
+  --accent-color: #F9A826;
+  --background-color: #F4F7FA;
+  --card-bg: #FFFFFF;
+  --text-color: #1B1F23;
+  --even-card-bg: #E8EEF2;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/*Advanced Selector 1 - Çift kartlar */
+.service-card:nth-child(even) {
+  background-color: var(--even-card-bg);
+}
+
+/*Advanced Selector 2 - Hover */
+.service-card:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/*Advanced Selector 3 - İlk kart */
+.service-card:first-of-type {
+  border: 3px solid var(--primary-color);
+}
+
+/*Advanced Selector 4 - Adjacent sibling */
+.services h2 + .service-card {
+  border-top: 5px solid var(--accent-color);
+}
